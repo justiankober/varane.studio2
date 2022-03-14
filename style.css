@@ -323,11 +323,19 @@ ul {
 
 .card__social {
   display: inline-flex;
-  margin: 0 10px;
-  font-size: 24px;
+  margin-top: 10px;
   color: #4a4a4a;
   text-decoration: none;
 }
+
+.main {
+  font-size: 72px;
+}
+
+.artists {
+  font-size: 36px;
+}
+
 .card_light:hover .card__content {
   bottom: 0;
 }
@@ -356,6 +364,25 @@ ul {
   display: none;
 }
 
+/* Our Artists */
+
+.headline {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color: black;
+  transition: 0.3s;
+  padding-top: 50px;
+}
+
+.is-black .headline {
+  color: white;
+}
 /* Artist card section */
 
 .card {
@@ -437,6 +464,9 @@ ul {
   color: var(--text-color);
   padding-left: 8px;
 }
+
+/* Artists Page */
+
 /*# sourceMappingURL=main.css.map */
 
 /* Black Styles */
