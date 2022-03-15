@@ -158,6 +158,13 @@ ul {
   padding-bottom: 30px;
 }
 
+.intro__artists {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .intro__content {
   max-width: 560px;
   width: 100%;
@@ -260,6 +267,16 @@ ul {
   text-replace: 0.5s;
 }
 
+.card_artist {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  text-replace: 0.5s;
+}
+
 .card_light img {
   display: block;
   width: 100%;
@@ -268,6 +285,15 @@ ul {
 }
 
 .card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: 0.5s;
+}
+
+.card__img_artist {
   position: absolute;
   top: 0;
   left: 0;
@@ -401,6 +427,87 @@ ul {
 
 .tattoostyle {
   margin-bottom: 0%;
+}
+
+/* Artists Gallery */
+.hi-slide {
+  position: relative;
+  width: 754px;
+  height: 292px;
+  border-radius: 50px;
+  margin: 115px auto 0;
+}
+
+.hi-slide .hi-next,
+.hi-slide .hi-prev {
+  position: absolute;
+  top: 50;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  border-radius: 50px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: all 2s;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hi-slide .hi-prev {
+  left: 59px;
+}
+
+.hi-slide .hi-prev::before {
+  content: "<";
+}
+
+.hi-slide .hi-next {
+  right: 59px;
+}
+
+.hi-slide .hi-next::before {
+  content: ">";
+}
+
+.hi-slide > ul {
+  list-style: none;
+  position: relative;
+  width: 754px;
+  height: 292px;
+  margin: 0;
+  padding: 0;
+}
+
+.hi-slide > ul > li {
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  left: 377px;
+  top: 147px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 3px solid white;
+  cursor: pointer;
+  background-color: #333;
+}
+
+.hi-slide > ul > li > img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+
+.artists_gallery {
+  display: flex;
+}
+
+.vitalij {
+  width: 500px;
 }
 
 /* Footer */
@@ -595,6 +702,12 @@ body.is-black {
 
 .is-black .footer-col ul li a:hover {
   color: white;
+}
+
+.is-black .hi-slide .hi-next,
+.is-black .hi-slide .hi-prev {
+  background-color: white;
+  color: black;
 }
 
 /* Media Queries */
